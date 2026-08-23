@@ -118,12 +118,13 @@
     class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
     <!-- TopNavBar -->
     <nav
-        class="bg-surface-container-lowest dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm">
+        class="relative bg-surface-container-lowest dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm">
         <div
             class="flex justify-between items-center h-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
             <div
                 class="font-display-lg text-headline-md font-bold text-primary dark:text-inverse-primary flex items-center gap-2">
-                <img alt="Rose Express Cargo Logo" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyu7r0gdk1C0dvJem1wts8mQP-3sPW_g_W_Sok2a0Wqhij6LqnOqmkLX0HDBOmQwj5VEJEjVt2mnuiN6mq7wBGwI8sMsymmWQnAZCyZI9h4r9XnrN6i0kcZpQ1d7GlJVh5BmSkvzKxaKE1Rdly_sxeKqbFMIo9YvPYSEWQgX7A52MWqsF_PtOl51rkhO1ABIm0rbZdYnItsTfuYMlQekkNwQgHupp17pUoQBenm-nFPmaHWcmkwzmpTvjmRmTbaWjg1rA">
+                <img alt="Rose Express Cargo Logo" class="h-16 w-auto object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyu7r0gdk1C0dvJem1wts8mQP-3sPW_g_W_Sok2a0Wqhij6LqnOqmkLX0HDBOmQwj5VEJEjVt2mnuiN6mq7wBGwI8sMsymmWQnAZCyZI9h4r9XnrN6i0kcZpQ1d7GlJVh5BmSkvzKxaKE1Rdly_sxeKqbFMIo9YvPYSEWQgX7A52MWqsF_PtOl51rkhO1ABIm0rbZdYnItsTfuYMlQekkNwQgHupp17pUoQBenm-nFPmaHWcmkwzmpTvjmRmTbaWjg1rA">
             </div>
             <div class="hidden md:flex items-center gap-8">
                 <a class="nav-link border-b-2 pb-1 transition-colors duration-200 cursor-pointer active:scale-95 text-secondary font-bold border-secondary"
@@ -140,9 +141,38 @@
                     class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2 rounded-lg font-bold transition-colors duration-200 shadow-[0_4px_14px_0_rgba(252,130,12,0.39)] inline-block">Get
                     a Quote</a>
             </div>
-            <button class="md:hidden text-primary p-2">
+            
+            <button id="mobile-menu-button" class="md:hidden text-primary p-2" type="button">
                 <span class="material-symbols-outlined">menu</span>
             </button>
+
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-outline-variant shadow-lg">
+                <div class="flex flex-col px-6 py-4 gap-4">
+
+                    <a href="#" class="mobile-nav-link text-primary font-bold py-2">
+                        Home
+                    </a>
+
+                    <a href="#services" class="mobile-nav-link text-on-surface-variant py-2">
+                        Services
+                    </a>
+
+                    <a href="#contact" class="mobile-nav-link text-on-surface-variant py-2">
+                        Contact
+                    </a>
+
+                    <a href="about.html" class="mobile-nav-link text-on-surface-variant py-2">
+                        About
+                    </a>
+
+                    <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
+                        class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-bold text-center">
+                        Get a Quote
+                    </a>
+
+                </div>
+            </div>
         </div>
     </nav>
     <!-- Hero Section -->
@@ -387,6 +417,29 @@
                 link.addEventListener('click', function () {
                     setActive(this);
                 });
+            });
+        });
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+
+            const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
+
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.textContent = 'menu';
+            } else {
+                icon.textContent = 'close';
+            }
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+
+                const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
+                icon.textContent = 'menu';
             });
         });
     </script>

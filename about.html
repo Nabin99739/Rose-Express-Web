@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>About Us - Rose Express Cargo</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#000767",
+                        "on-tertiary-fixed-variant": "#00429c",
+                        "on-error-container": "#93000a",
+                        "primary": "#000666",
+                        "on-primary-fixed-variant": "#343d96",
+                        "surface": "#f9f9fb",
+                        "outline": "#767683",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#8690ee",
+                        "surface-container-highest": "#e2e2e4",
+                        "secondary": "#964900",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#b0c6ff",
+                        "tertiary-fixed": "#d9e2ff",
+                        "surface-variant": "#e2e2e4",
+                        "surface-tint": "#4c56af",
+                        "primary-fixed": "#e0e0ff",
+                        "on-tertiary-fixed": "#001945",
+                        "on-background": "#1a1c1d",
+                        "on-surface-variant": "#454652",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8ea",
+                        "outline-variant": "#c6c5d4",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#1a237e",
+                        "on-secondary-fixed": "#311300",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f0f0f2",
+                        "on-surface": "#1a1c1d",
+                        "surface-bright": "#f9f9fb",
+                        "surface-container": "#eeeef0",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "secondary-fixed-dim": "#ffb786",
+                        "background": "#f9f9fb",
+                        "surface-container-low": "#f3f3f5",
+                        "on-secondary-container": "#5e2c00",
+                        "tertiary": "#001944",
+                        "inverse-surface": "#2f3132",
+                        "inverse-primary": "#bdc2ff",
+                        "surface-dim": "#d9dadc",
+                        "secondary-container": "#fc820c",
+                        "secondary-fixed": "#ffdcc6",
+                        "on-tertiary-container": "#6b95f3",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#002c6e",
+                        "on-secondary-fixed-variant": "#723600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "base": "8px",
+                        "max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "margin-tablet": "40px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Archivo Narrow"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "display-lg": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+    <!-- TopNavBar (Shared Component) -->
+    <nav
+        class="bg-surface-container-lowest dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm">
+        <div
+            class="flex justify-between items-center h-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+            <div
+                class="font-display-lg text-headline-md font-bold text-primary dark:text-inverse-primary flex items-center gap-2">
+                <img alt="Rose Express Cargo Logo" class="h-16 w-auto object-contain"
+                    src="images/rose logo.png">
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
+                    href="index.html">Home</a>
+                <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
+                    href="index.html#services">Services</a>
+                <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
+                    href="index.html#contact">Contact</a>
+                <a class="nav-link border-b-2 pb-1 transition-colors duration-200 cursor-pointer active:scale-95 text-secondary font-bold border-secondary"
+                    href="#">About</a>
+            </div>
+            <div class="hidden md:flex items-center">
+                <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer" class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2 rounded-lg font-bold transition-colors duration-200 shadow-[0_4px_14px_0_rgba(252,130,12,0.39)] inline-block">Get a Quote</a>
+            </div>
+            <button class="md:hidden text-primary p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="flex-grow pt-24 pb-16">
+        <!-- Hero Section -->
+        <section class="relative bg-primary py-24 md:py-32 px-margin-mobile md:px-margin-desktop overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary to-primary-container opacity-90 z-10"></div>
+            <div class="absolute inset-0 bg-cover bg-center z-0 opacity-40"
+                data-alt="A wide angle shot of a bustling international cargo port at dusk, massive ships and cranes silhouetted against a deep blue sky. Soft, professional lighting, conveying reliability, scale, and global logistics capability. Modern corporate aesthetic with subtle orange accents from port lights."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdI_byWnEnZSSxqy9cTjz2v74zCyzU-jjZjnH-cclrJ9fv0bCx5SojyWFxg4dmOEtYH15MvbYPB1lYIbrKya7Inkpfm75KMP4RzEwzQJJM71OEzajQIY7DCKzAahM_6G7rt3F3BHGm8GTM3E7_OWF37LBwlXVMPpu_DdCpNAPxWs1Z0VL31ZezxK6BYbQx5ME-CCihF6UBXSgGRyN7BsC1MOtAxs3Fwn0hlIIwXiDGvNIGuOZ-2Xr27Q')">
+            </div>
+            <div class="relative z-20 max-w-max-width mx-auto">
+                <div class="max-w-2xl">
+                    <span
+                        class="font-label-sm text-label-sm uppercase text-secondary-fixed-dim tracking-widest mb-4 block" style="font-size: large;">
+                        Our Story</span>
+                    <h1 class="font-display-lg text-display-lg md:text-display-lg text-on-primary mb-6">Connecting
+                        Kathmandu to the World</h1>
+                    <p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-xl">
+                        Rose Express Cargo, based in the heart of Boudha, Kathmandu, is your trusted partner for
+                        reliable, swift, and secure domestic and international courier services.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Mission / Info Bento Grid -->
+        <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                <!-- Main Info Card -->
+                <div
+                    class="md:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-sm relative overflow-hidden group hover:border-primary transition-colors">
+                    <div
+                        class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 group-hover:text-secondary transition-all">
+                        <span class="material-symbols-outlined text-6xl">globe</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Our
+                        Commitment</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-2xl leading-relaxed">
+                        At Rose Express Cargo, we understand that every package carries importance. Located
+                        strategically in Boudha-6, Kathmandu, we have built our reputation on a foundation of trust,
+                        speed, and unwavering reliability. Whether it's a vital document needing next-day domestic
+                        delivery or a bulk cargo shipment destined across continents, our dedicated team ensures it
+                        reaches its destination safely and on time.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary-fixed p-3 rounded-lg text-primary">
+                                <span class="material-symbols-outlined">local_shipping</span>
+                            </div>
+                            <div>
+                                <h3 class="font-headline-md text-headline-md text-on-surface text-lg">Domestic Logistics
+                                </h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Rapid
+                                    nationwide delivery network across Nepal.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-secondary-fixed p-3 rounded-lg text-secondary">
+                                <span class="material-symbols-outlined">flight_takeoff</span>
+                            </div>
+                            <div>
+                                <h3 class="font-headline-md text-headline-md text-on-surface text-lg">Global Reach</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Seamless
+                                    international shipping to over 200 countries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stats / Trust Card -->
+                <div class="md:col-span-4 bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-headline-md text-headline-md mb-2">Why Choose Us?</h3>
+                        <p class="font-body-md text-body-md text-primary-fixed-dim">Professional logistics tailored for
+                            Kathmandu's unique needs.</p>
+                    </div>
+                    <div class="mt-8 space-y-6">
+                        <div class="border-l-2 border-secondary pl-4">
+                            <p class="font-display-lg text-display-lg text-secondary-fixed-dim leading-none">100%</p>
+                            <p class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed mt-2">
+                                Tracking Visibility</p>
+                        </div>
+                        <div class="border-l-2 border-secondary pl-4">
+                            <p class="font-display-lg text-display-lg text-secondary-fixed-dim leading-none">24/7</p>
+                            <p class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed mt-2">
+                                Customer Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Global Partners Section -->
+        <section class="bg-surface-container-low py-16 md:py-24 border-y border-outline-variant">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <span class="font-label-sm text-label-sm uppercase text-secondary tracking-widest mb-2 block">Our
+                    Network</span>
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-12">Trusted
+                    Global Partners</h2>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-12 md:gap-16 opacity-100 hover:opacity-100 transition-opacity">
+                    <img alt="DHL" class="h-20 w-auto object-contain transition-all duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQz1V-No-BGocpcUZhPMoGL4fDtx7gR0CW57vrIguh4nuHiu8O9mwX468A7PJCFhzBDbTwtd8mq6qlmfLPBLNMzVrTaksPGgNFmNNTM8c9Ws9Tb9NoLmHo5X-AMPRmyHaald9U7Vx_OZaT8f72L7UCipX-YBBLRI-LQGFmSjHx6lLYmx7UH8O2w6IxatQpEdusAGNhtIPvIi5DQxLi-j4kGUFroXIEfvHixSOVbp6uIzaOMNiYrlzfrVugLOmhSkpNa-Y"><img
+                        alt="FedEx" class="h-20 w-auto object-contain transition-all duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0lMrE5x5nDlmsPhpdS2RKVZTyLxqAAa5hqUHeXgY6tBJ2CKrW5ICsY40FNkeOj6YqxdvQs6ZXCCZTzip5UwIsAIpuHh06eWlAFzEPSfwu8oRLFVmOStMsPDObUp_oglSDq7BMUP9e19GaeC1_QnIkIzY8WVs6BEROsQN6KU56APUiI-LrbpEluAG35TRogJlTc3oawbtVqirCYDA13Itf4KqurnD4rTUMFwPVTO69EakuEwnVNt7qE1rp4tVENZFiSa0"><img
+                        alt="UPS" class="h-20 w-auto object-contain transition-all duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG_5YTRvi97IX_pN6iVzaBsnoOyF_KceWywd2dsBYpPOP2b9Qzlhos7CODFLXIbDW1g3hDJ19QsmCdJqff2AFyPF-3gjm-Fg6HM0Pt4ZqHZIM8Va-lQ71z_vE7XlxTa41nimghvVuBn9pFdlT_VaB6xsHKP7kizL99tbf53IY069aD3VvC91IdNAq7bV6AtgiPpEn7ZKdAgNI3fAz8oJhGjzoAhEeUSfxCw_stAPEKt0z-SnN69bkY5ygfVFypL7d1UDo"><img
+                        alt="TNT" class="h-20 w-auto object-contain transition-all duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkBIuLa5iYICNuNemmJz9dpf2K8GMv71q6BccCreoQIDfF_BbEsaz0l2QtQqdK7F8uVtTgjf-t5zOaEgJbwXasQUD1fIzTkCAW_cAtf_bzsGSYrY2qLforsHyuOiOl8fHtoC0yK99uOkB_Khsk8YWx--5zts6q3HpK4sn5HmOrHKQwAezA_esv_ofSqwM75xtZlXaqVT2XlzWs0vrAZo_A3m6QqquVQFfgV6qnPwAAobNNA7FgOUMsOoCqFBFoHceoaGg"><img
+                        alt="Aramex" class="h-20 w-auto object-contain transition-all duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9RbD96X_U1EHxzCtM9XEZttiXkrC_WXAh4vQDSnTV8Nh0_6xLn_FxmKKHjONYroJtDTIsMG6U8Ifu-KNWwVP9eiB7OIIF2Ktnn7BFICxE0uVS7pwEjfVExefgCc8bIsCRoCo-S1w0FT3WumLLae6w9k7hEkod4HtJRIbwYxhIbd_1shSdUxAeuPZnZ1Z7BSKn0iE1bqElXOnWNgIgHz-yRzzxpbnjQbgfsh27UUNtyxucVP3I14W4FU1DLmaOJAzvUJg"><img
+                        alt="DPD" class="h-20 w-auto object-contain transition-all duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDegrYpR08-RGkKphzmbTmpQy3XywwEWugJdT_y6Ydp-otw9XYh42P9RBvvjrwLngKevfW7yxtNNJAFhj53o0vwrTqZediPeN3M9x5QmJBojIAIzJyg9MxsiA7vuESQAao8z5gwQZv5XTx3MZOfWCoYCo_7VIChnm5W64cJD9bMNax80ixf8gcoIxEGctLdp3DWdBZNysxIoCWaczr-sViQn5lNMdix6uQ5cAK5ehbiQUnfYuW8CXJdL7Rp9ao5jWpUsr4">
+                </div>
+            </div>
+        </section>
+        <!-- Location & Contact Map Section -->
+        <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Visit Our
+                        Office</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Conveniently located in Boudha, Kathmandu, our main office is ready to handle all your dispatch
+                        needs. Drop by for a consultation or to drop off your parcels.
+                    </p>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="bg-surface-container-high p-2 rounded text-primary">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase text-outline">Address</h4>
+                                <p class="font-body-md text-body-md text-on-surface font-medium">Boudha-6, Kathmandu,
+                                    Nepal</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-surface-container-high p-2 rounded text-primary">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase text-outline">Email</h4>
+                                <a class="font-body-md text-body-md text-on-surface font-medium hover:text-secondary transition-colors"
+                                    href="mailto:rosexpressboudha@gmail.com">rosexpressboudha@gmail.com</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-surface-container-high p-2 rounded text-primary">
+                                <span class="material-symbols-outlined">chat</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase text-outline">WhatsApp</h4>
+                                <a class="font-body-md text-body-md text-on-surface font-medium hover:text-secondary transition-colors"
+                                    href="tel:+9779867288040">+977 9867288040</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-surface-container-high p-2 rounded text-primary"><svg
+                                    class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                                    </path>
+                                </svg></div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase text-outline">Facebook</h4><a
+                                    class="font-body-md text-body-md text-on-surface font-medium hover:text-secondary transition-colors"
+                                    href="https://www.facebook.com/profile.php?id=61593496862490" target="_blank">Rose
+                                    Express Cargo</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-surface-container-high p-2 rounded text-primary"><svg
+                                    class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                    </path>
+                                </svg></div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase text-outline">Instagram</h4><a
+                                    class="font-body-md text-body-md text-on-surface font-medium hover:text-secondary transition-colors"
+                                    href="https://www.instagram.com/rosexpressboudha/"
+                                    target="_blank">@rosexpressboudha</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-surface-container-high p-2 rounded text-primary"><svg
+                                    class="w-6 h-6 fill-current" viewBox="0 0 16 16">
+                                    <path
+                                        d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z">
+                                    </path>
+                                </svg></div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase text-outline">Tiktok</h4><a
+                                    class="font-body-md text-body-md text-on-surface font-medium hover:text-secondary transition-colors"
+                                    href="https://www.tiktok.com/@rose.express.carg?_r=1&_t=ZS-994AGlhbjZy&fbclid=IwY2xjawT3YRNwZG9mAWV4dG4DYWVtAjExAHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5OxM3UD2QAidbExvtB-BilGwxYUFKZslLtPQOpvCQqd3jEbE5P3SC4Rp2RsQ_aem_aRT5VEsimY3wpSM4JVHZBA"
+                                    target="_blank">@rose.express.carg</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="bg-surface-container-high p-2 rounded text-primary"><svg
+                                    class="w-6 h-6 fill-current" viewBox="0 0 16 16">
+                                    <path
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z">
+                                    </path>
+                                </svg></div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm uppercase text-outline">Contact US</h4><a
+                                    class="font-body-md text-body-md text-on-surface font-medium hover:text-secondary transition-colors"
+                                    href="https://www.tiktok.com/@rose.express.carg?_r=1&_t=ZS-994AGlhbjZy&fbclid=IwY2xjawT3YRNwZG9mAWV4dG4DYWVtAjExAHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5OxM3UD2QAidbExvtB-BilGwxYUFKZslLtPQOpvCQqd3jEbE5P3SC4Rp2RsQ_aem_aRT5VEsimY3wpSM4JVHZBA"
+                                    target="_blank"> +977 01-5929573</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Google Map Embed -->
+                <div
+                    class="rounded-xl overflow-hidden shadow-sm border border-outline-variant h-[400px] bg-surface-container-high">
+                    <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14126.966952796464!2d85.3524!3d27.724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1970d2e564f1%3A0x6b09dfbd7a818c3!2sBoudha%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                        style="border:0;" width="100%"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer (Shared Component) -->
+    <footer class="bg-primary text-on-primary w-full mt-auto">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-max-width mx-auto">
+            <div class="md:col-span-1">
+                <span class="font-headline-md text-headline-md font-bold text-on-primary mb-4 block"><img src="/images/Rose Logo.jpeg" alt=""></span>
+                <p class="font-body-md text-body-md text-on-primary/80 mb-4">Connecting Kathmandu to the world with
+                    reliable logistics.</p>
+                <p class="font-body-md text-body-md text-on-primary/80 text-sm">
+                    Boudha-6, Kathmandu<br>
+                    WhatsApp: +977 9867288040<br>
+                    rosexpressboudha@gmail.com <br>
+                    &#9742; 01-5929573;
+                </p>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim mb-4">Company
+                </h4>
+                <ul class="space-y-2">
+                    <li class=""><a
+                            class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors cursor-pointer"
+                            href="about.html">About Us</a></li>
+                    <li class=""><a
+                            class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors cursor-pointer"
+                            href="index.html#services">Services</a></li>
+                    <li class=""><a
+                            class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors cursor-pointer"
+                            href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim mb-4">Legal
+                </h4>
+                <ul class="space-y-2">
+                    <li class=""><a
+                            class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors cursor-pointer"
+                            href="privacy.html">Privacy Policy</a></li>
+                    <li class=""><a
+                            class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors cursor-pointer"
+                            href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim mb-4">Support
+                </h4>
+                <ul class="space-y-2">
+                    <li class=""><a
+                            class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors cursor-pointer"
+                            href="faq.html">FAQ</a></li>
+
+                </ul>
+            </div>
+        <div>
+            <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim mb-4">Follow Us
+                </h4>
+                <ul class="space-y-2">
+                    <li class=""><a
+                            class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors cursor-pointer flex items-center gap-2"
+                            href="https://www.facebook.com/profile.php?id=61593496862490" target="_blank"><svg
+                                class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                                </path>
+                            </svg> Facebook</a></li>
+                    <li class=""><a
+                            class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors cursor-pointer flex items-center gap-2"
+                            href="https://www.instagram.com/rosexpressboudha/" target="_blank"><svg
+                                class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+                
+        <div class="border-t border-on-primary/20 px-margin-mobile md:px-margin-desktop py-6 max-w-max-width mx-auto">
+            <p class="font-body-md text-body-md text-on-primary/60 text-sm text-center">© 2026 Rose Express Cargo &amp;
+                Courier Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>FAQ - Rose Express Cargo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9fb",
+                        "surface-container-highest": "#e2e2e4",
+                        "tertiary-container": "#002c6e",
+                        "surface-tint": "#4c56af",
+                        "error": "#ba1a1a",
+                        "primary-container": "#1a237e",
+                        "inverse-surface": "#2f3132",
+                        "primary-fixed": "#e0e0ff",
+                        "surface-container-low": "#f3f3f5",
+                        "outline": "#767683",
+                        "on-tertiary-fixed-variant": "#00429c",
+                        "on-tertiary-fixed": "#001945",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#343d96",
+                        "surface-container-high": "#e8e8ea",
+                        "inverse-on-surface": "#f0f0f2",
+                        "outline-variant": "#c6c5d4",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffdcc6",
+                        "primary": "#000666",
+                        "on-primary-container": "#8690ee",
+                        "on-secondary-fixed": "#311300",
+                        "surface-variant": "#e2e2e4",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#b0c6ff",
+                        "on-primary-fixed": "#000767",
+                        "background": "#f9f9fb",
+                        "on-surface-variant": "#454652",
+                        "surface-dim": "#d9dadc",
+                        "secondary-fixed-dim": "#ffb786",
+                        "inverse-primary": "#bdc2ff",
+                        "surface": "#f9f9fb",
+                        "on-surface": "#1a1c1d",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1a1c1d",
+                        "tertiary": "#001944",
+                        "surface-container": "#eeeef0",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#5e2c00",
+                        "secondary": "#964900",
+                        "on-tertiary-container": "#6b95f3",
+                        "tertiary-fixed": "#d9e2ff",
+                        "on-secondary-fixed-variant": "#723600",
+                        "secondary-container": "#fc820c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "max-width": "1280px",
+                        "base": "8px",
+                        "margin-tablet": "40px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Archivo Narrow"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Archivo Narrow"],
+                        "display-lg": ["Archivo Narrow"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            /* Arbitrary large number */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md font-body-md flex flex-col min-h-screen">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-surface-container-lowest dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm">
+        <div
+            class="flex justify-between items-center h-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+            <!-- Brand Logo -->
+            <a class="flex items-center" href="#">
+                <img alt="Rose Express Cargo" class="h-16 w-auto object-contain" src="images/rose logo.png">
+                <span class="sr-only">Rose Express Cargo</span>
+            </a>
+            <!-- Desktop Navigation Links -->
+            <ul class="hidden md:flex items-center space-x-gutter">
+                <li class=""><a
+                        class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                        href="index.html">Home</a></li>
+                <li class=""><a
+                        class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                        href="index.html#services">Services</a></li>
+                <li class=""><a
+                        class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                        href="index.html#contact">Contact</a></li>
+                <li class=""><a
+                        class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                        href="about.html">About</a></li>
+                <li class=""><a
+                        class="text-secondary font-bold transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                        href="faq.html">FAQ</a></li>
+            </ul>
+            <!-- Trailing Action / Mobile Menu Toggle -->
+            <div class="hidden md:flex items-center">
+                <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
+                    class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2 rounded-lg font-bold transition-colors duration-200 shadow-[0_4px_14px_0_rgba(252,130,12,0.39)] inline-block">Get
+                    a Quote</a>
+            </div>
+            <button class="md:hidden text-primary dark:text-inverse-primary p-2 focus:outline-none">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+            </button>
+        </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20">
+        <!-- Page Header -->
+        <div class="mb-12 text-center md:text-left">
+            <h1 class="font-display-lg text-display-lg text-primary mb-4">Frequently Asked Questions</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Find quick answers to common
+                questions about our shipping, tracking, and logistical services.</p>
+        </div>
+        <!-- FAQ Accordion Container -->
+        <div class="max-w-3xl mx-auto md:mx-0 w-full space-y-4" id="faq-container">
+            <!-- Question 1 -->
+            <div class="accordion-item border border-outline-variant rounded bg-surface-bright overflow-hidden">
+                <button
+                    class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-surface-container-low transition-colors focus:outline-none">
+                    <span class="font-headline-md text-headline-md text-primary">Where is Rose Express Cargo
+                        located?</span>
+                    <span class="material-symbols-outlined accordion-icon text-outline">expand_more</span>
+                </button>
+                <div class="accordion-content px-6 bg-surface-container-lowest">
+                    <p class="text-on-surface-variant font-body-md text-body-md">We are located at Boudha-6, Kathmandu,
+                        Nepal. Visit our office during working hours for personalized assistance with your shipments.
+                    </p>
+                </div>
+            </div>
+            <!-- Question 2 -->
+            <div class="accordion-item border border-outline-variant rounded bg-surface-bright overflow-hidden">
+                <button
+                    class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-surface-container-low transition-colors focus:outline-none">
+                    <span class="font-headline-md text-headline-md text-primary">What are your working hours?</span>
+                    <span class="material-symbols-outlined accordion-icon text-outline">expand_more</span>
+                </button>
+                <div class="accordion-content px-6 bg-surface-container-lowest">
+                    <p class="text-on-surface-variant font-body-md text-body-md">Our operational hours are Sunday to
+                        Friday, from 10:00 AM to 6:00 PM. We are closed on Saturdays and major public holidays.</p>
+                </div>
+            </div>
+            <!-- Question 3 -->
+            <div class="accordion-item border border-outline-variant rounded bg-surface-bright overflow-hidden">
+                <button
+                    class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-surface-container-low transition-colors focus:outline-none">
+                    <span class="font-headline-md text-headline-md text-primary">Do you provide door-to-door
+                        delivery?</span>
+                    <span class="material-symbols-outlined accordion-icon text-outline">expand_more</span>
+                </button>
+                <div class="accordion-content px-6 bg-surface-container-lowest">
+                    <p class="text-on-surface-variant font-body-md text-body-md">Yes, we offer comprehensive
+                        door-to-door delivery services for both domestic and international shipments, ensuring a
+                        seamless experience from pickup to final destination.</p>
+                </div>
+            </div>
+            <!-- Question 5 -->
+            <div class="accordion-item border border-outline-variant rounded bg-surface-bright overflow-hidden">
+                <button
+                    class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-surface-container-low transition-colors focus:outline-none">
+                    <span class="font-headline-md text-headline-md text-primary">What international courier services do
+                        you offer?</span>
+                    <span class="material-symbols-outlined accordion-icon text-outline">expand_more</span>
+                </button>
+                <div class="accordion-content px-6 bg-surface-container-lowest">
+                    <p class="text-on-surface-variant font-body-md text-body-md">We partner with leading global networks
+                        including DHL, FedEx, UPS, TNT, Aramex, and DPD to provide reliable and fast international
+                        shipping solutions to over 200 countries.</p>
+                </div>
+            </div>
+            <!-- Question 6 -->
+            <div class="accordion-item border border-outline-variant rounded bg-surface-bright overflow-hidden">
+                <button
+                    class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-surface-container-low transition-colors focus:outline-none">
+                    <span class="font-headline-md text-headline-md text-primary">Do you handle domestic deliveries
+                        within Nepal?</span>
+                    <span class="material-symbols-outlined accordion-icon text-outline">expand_more</span>
+                </button>
+                <div class="accordion-content px-6 bg-surface-container-lowest">
+                    <p class="text-on-surface-variant font-body-md text-body-md">Yes, we provide extensive domestic
+                        courier and cargo services across major cities and regional hubs within Nepal, ensuring secure
+                        and timely local deliveries.</p>
+                </div>
+            </div>
+            <!-- Question 7 -->
+            <div class="accordion-item border border-outline-variant rounded bg-surface-bright overflow-hidden">
+                <button
+                    class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-surface-container-low transition-colors focus:outline-none">
+                    <span class="font-headline-md text-headline-md text-primary">How can I get a quote for my
+                        shipment?</span>
+                    <span class="material-symbols-outlined accordion-icon text-outline">expand_more</span>
+                </button>
+                <div class="accordion-content px-6 bg-surface-container-lowest">
+                    <p class="text-on-surface-variant font-body-md text-body-md">You can request a quote by clicking the
+                        "Get a Quote" button in our navigation bar, calling our customer support, or sending us an email
+                        with your shipment details (dimensions, weight, origin, and destination).</p>
+                </div>
+            </div>
+            <!-- Question 8 -->
+            <div class="accordion-item border border-outline-variant rounded bg-surface-bright overflow-hidden">
+                <button
+                    class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-surface-container-low transition-colors focus:outline-none">
+                    <span class="font-headline-md text-headline-md text-primary">What items are prohibited for
+                        shipping?</span>
+                    <span class="material-symbols-outlined accordion-icon text-outline">expand_more</span>
+                </button>
+                <div class="accordion-content px-6 bg-surface-container-lowest">
+                    <p class="text-on-surface-variant font-body-md text-body-md">Prohibited items generally include
+                        hazardous materials, flammable liquids, explosives, illegal substances, and perishable goods.
+                        Please contact our support team for a detailed and destination-specific list of restricted
+                        items.</p>
+                </div>
+            </div>
+            <!-- Question 9 -->
+            <div class="accordion-item border border-outline-variant rounded bg-surface-bright overflow-hidden">
+                <button
+                    class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-surface-container-low transition-colors focus:outline-none">
+                    <span class="font-headline-md text-headline-md text-primary">Do you provide customs clearance
+                        support?</span>
+                    <span class="material-symbols-outlined accordion-icon text-outline">expand_more</span>
+                </button>
+                <div class="accordion-content px-6 bg-surface-container-lowest">
+                    <p class="text-on-surface-variant font-body-md text-body-md">Absolutely. Our expert logistics team
+                        handles customs documentation and clearance procedures to ensure your international shipments
+                        comply with regulatory requirements and avoid unnecessary delays.</p>
+                </div>
+            </div>
+            <!-- Question 10 -->
+            <div class="accordion-item border border-outline-variant rounded bg-surface-bright overflow-hidden">
+                <button
+                    class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-surface-container-low transition-colors focus:outline-none">
+                    <span class="font-headline-md text-headline-md text-primary">How can I contact customer
+                        support?</span>
+                    <span class="material-symbols-outlined accordion-icon text-outline">expand_more</span>
+                </button>
+                <div class="accordion-content px-6 bg-surface-container-lowest">
+                    <p class="text-on-surface-variant font-body-md text-body-md">You can reach our customer support team
+                        directly via WhatsApp at +977 9867288040, calling at +977 01-5929573 or by sending an email to
+                        rosexpressboudha@gmail.com.
+                        We are here to help during our standard working hours.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Prompt -->
+        <div
+            class="mt-16 bg-surface-container-low rounded-xl p-8 text-center border border-outline-variant max-w-3xl mx-auto md:mx-0">
+            <h3 class="font-headline-lg text-headline-lg text-primary mb-2">Still have questions?</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">Our professional logistics team is ready
+                to assist you with specific inquiries.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a class="inline-flex items-center justify-center bg-white border border-outline-variant text-primary px-6 py-3 rounded hover:bg-surface-bright transition-colors font-label-sm text-label-sm"
+                    href="tel:+9779867288040">
+                    <span class="material-symbols-outlined mr-2" style="font-variation-settings: 'FILL' 1;">call</span>
+                    +977 9867288040
+                </a>
+                <a class="inline-flex items-center justify-center bg-white border border-outline-variant text-primary px-6 py-3 rounded hover:bg-surface-bright transition-colors font-label-sm text-label-sm"
+                    href="tel:+9779867288040">
+                    <span class="material-symbols-outlined mr-2" style="font-variation-settings: 'FILL' 1;">call</span>
+                    +977 01-5929573
+                </a>
+                <a class="inline-flex items-center justify-center bg-white border border-outline-variant text-primary px-6 py-3 rounded hover:bg-surface-bright transition-colors font-label-sm text-label-sm"
+                    href="mailto:rosexpressboudha@gmail.com">
+                    <span class="material-symbols-outlined mr-2" style="font-variation-settings: 'FILL' 1;">mail</span>
+                    Email Support
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-primary dark:bg-surface-container-highest w-full flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-8 gap-gutter"
+        id="contact">
+        <div class="flex flex-col gap-2">
+            <div class="text-on-primary font-bold font-headline-md flex items-center gap-2"><img
+                    alt="Rose Express Cargo Logo" class="h-10 w-auto object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkcEgETc-B4kWo12AfkRYaso_4qvtfV8b4K3mbDo0tDGVfpyXvBLYRhLSvbFFe7nu507VcLh3lz__9mYzETDyWOuAGUCge37AZTWuTpypgBlMAPFN-gsGj0rkoV7ibs-ee4COwf_0SIp80dcGFZi7zlkWEfB3VmxK9WZdCcO20TF0xMTbxslmCLvLFobXeqJP7M5PGjome5W8Bd30_wtlQ2R6VrWZvk03yAccQpw8zwkAEtYpfNkRiWmkBBOYD9kVQoms">
+            </div>
+            <p class="text-on-primary-container font-label-sm text-label-sm">Boudha-6, Kathmandu (In front of Arunima
+                school)</p>
+            <div class="flex gap-4 mt-2">
+                <span class="text-on-primary flex items-center gap-1 font-label-sm"><span
+                        class="material-symbols-outlined text-sm">phone</span> 01-5929573</span>
+                <span class="text-on-primary flex items-center gap-1 font-label-sm"><span
+                        class="material-symbols-outlined text-sm">smartphone</span> 9867288040</span>
+            </div>
+        </div>
+        <div class="flex gap-6 text-on-primary-container opacity-80 font-label-sm text-label-sm">
+            <a class="hover:text-secondary-fixed transition-opacity" href="privacy.html">Privacy Policy</a>
+            <a class="hover:text-secondary-fixed transition-opacity" href="tos.html">Terms of Service</a>
+            <a class="hover:text-secondary-fixed transition-opacity" href="faq.html">FAQ</a>
+
+        </div>
+        <div class="text-on-primary-container opacity-80 font-label-sm text-label-sm">
+            © 2026 Rose Express Cargo And Courier Pvt. Ltd. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const button = item.querySelector('button');
+
+                button.addEventListener('click', () => {
+                    // Close other open items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

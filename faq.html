@@ -140,74 +140,75 @@
 
 <body class="bg-background text-on-background font-body-md font-body-md flex flex-col min-h-screen">
     <!-- TopNavBar -->
-    <nav
-        class="bg-surface-container-lowest dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm">
-        <div
-            class="flex justify-between items-center h-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-            <!-- Brand Logo -->
-            <a class="flex items-center" href="#">
-                <img alt="Rose Express Cargo" class="h-16 w-auto object-contain"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyu7r0gdk1C0dvJem1wts8mQP-3sPW_g_W_Sok2a0Wqhij6LqnOqmkLX0HDBOmQwj5VEJEjVt2mnuiN6mq7wBGwI8sMsymmWQnAZCyZI9h4r9XnrN6i0kcZpQ1d7GlJVh5BmSkvzKxaKE1Rdly_sxeKqbFMIo9YvPYSEWQgX7A52MWqsF_PtOl51rkhO1ABIm0rbZdYnItsTfuYMlQekkNwQgHupp17pUoQBenm-nFPmaHWcmkwzmpTvjmRmTbaWjg1rA">
-                <span class="sr-only">Rose Express Cargo</span>
-            </a>
-            <!-- Desktop Navigation Links -->
-            <ul class="hidden md:flex items-center space-x-gutter">
-                <li class=""><a
-                        class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
-                        href="index.html">Home</a></li>
-                <li class=""><a
-                        class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
-                        href="index.html#services">Services</a></li>
-                <li class=""><a
-                        class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
-                        href="index.html#contact">Contact</a></li>
-                <li class=""><a
-                        class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
-                        href="about.html">About</a></li>
-                <li class=""><a
-                        class="text-secondary font-bold transition-colors duration-200 cursor-pointer font-body-md text-body-md"
-                        href="faq.html">FAQ</a></li>
-            </ul>
-            <!-- Trailing Action / Mobile Menu Toggle -->
-            <div class="hidden md:flex items-center">
-                <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
-                    class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2 rounded-lg font-bold transition-colors duration-200 shadow-[0_4px_14px_0_rgba(252,130,12,0.39)] inline-block">Get
-                    a Quote</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden text-primary p-2" type="button">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-
-            <div id="mobile-menu"
-                class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-outline-variant shadow-lg">
-                <div class="flex flex-col px-6 py-4 gap-4">
-
-                    <a href="index.html" class="mobile-nav-link text-primary font-bold py-2">
-                        Home
-                    </a>
-
-                    <a href="index.html#services" class="mobile-nav-link text-on-surface-variant py-2">
-                        Services
-                    </a>
-
-                    <a href="index.html#contact" class="mobile-nav-link text-on-surface-variant py-2">
-                        Contact
-                    </a>
-
-                    <a href="about.html" class="mobile-nav-link text-on-surface-variant py-2">
-                        About
-                    </a>
-
+    <header>
+        <nav
+            class="bg-surface-container-lowest dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm">
+            <div
+                class="flex justify-between items-center h-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <!-- Brand Logo -->
+                <a class="flex items-center" href="#">
+                    <img alt="Rose Express Cargo" class="h-16 w-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyu7r0gdk1C0dvJem1wts8mQP-3sPW_g_W_Sok2a0Wqhij6LqnOqmkLX0HDBOmQwj5VEJEjVt2mnuiN6mq7wBGwI8sMsymmWQnAZCyZI9h4r9XnrN6i0kcZpQ1d7GlJVh5BmSkvzKxaKE1Rdly_sxeKqbFMIo9YvPYSEWQgX7A52MWqsF_PtOl51rkhO1ABIm0rbZdYnItsTfuYMlQekkNwQgHupp17pUoQBenm-nFPmaHWcmkwzmpTvjmRmTbaWjg1rA">
+                    <span class="sr-only">Rose Express Cargo</span>
+                </a>
+                <!-- Desktop Navigation Links -->
+                <ul class="hidden md:flex items-center space-x-gutter">
+                    <li class=""><a
+                            class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                            href="index.html">Home</a></li>
+                    <li class=""><a
+                            class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                            href="index.html#services">Services</a></li>
+                    <li class=""><a
+                            class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                            href="index.html#contact">Contact</a></li>
+                    <li class=""><a
+                            class="text-on-surface-variant dark:text-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                            href="about.html">About</a></li>
+                    <li class=""><a
+                            class="text-secondary font-bold transition-colors duration-200 cursor-pointer font-body-md text-body-md"
+                            href="faq.html">FAQ</a></li>
+                </ul>
+                <!-- Trailing Action / Mobile Menu Toggle -->
+                <div class="hidden md:flex items-center">
                     <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
-                        class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-bold text-center">
-                        Get a Quote
-                    </a>
+                        class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2 rounded-lg font-bold transition-colors duration-200 shadow-[0_4px_14px_0_rgba(252,130,12,0.39)] inline-block">Get
+                        a Quote</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-primary p-2" type="button">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
 
+                <div id="mobile-menu"
+                    class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-outline-variant shadow-lg">
+                    <div class="flex flex-col px-6 py-4 gap-4">
+
+                        <a href="index.html" class="mobile-nav-link text-primary font-bold py-2">
+                            Home
+                        </a>
+
+                        <a href="index.html#services" class="mobile-nav-link text-on-surface-variant py-2">
+                            Services
+                        </a>
+
+                        <a href="index.html#contact" class="mobile-nav-link text-on-surface-variant py-2">
+                            Contact
+                        </a>
+
+                        <a href="about.html" class="mobile-nav-link text-on-surface-variant py-2">
+                            About
+                        </a>
+
+                        <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
+                            class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-bold text-center">
+                            Get a Quote
+                        </a>
+
+                    </div>
                 </div>
             </div>
-        </div>
-
-    </nav>
+        </nav>
+    </header>
     <!-- Main Content -->
     <main class="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20">
         <!-- Page Header -->
@@ -467,7 +468,7 @@
                 icon.textContent = 'menu';
             });
         });
-    
+
     </script>
 
 

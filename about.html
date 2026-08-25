@@ -119,29 +119,30 @@
     <!-- TopNavBar (Shared Component) -->
     <header>
         <nav
-            class="bg-surface-container-lowest dark:bg-inverse-surface sticky top-0 w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm">
+            class="fixed top-0 left-0 bg-surface-container-lowest dark:bg-inverse-surface w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm">
             <div
                 class="flex justify-between items-center h-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
                 <div
                     class="font-display-lg text-headline-md font-bold text-primary dark:text-inverse-primary flex items-center gap-2">
-                    <img alt="Rose Express Cargo Logo" class="h-16 w-auto object-contain"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyu7r0gdk1C0dvJem1wts8mQP-3sPW_g_W_Sok2a0Wqhij6LqnOqmkLX0HDBOmQwj5VEJEjVt2mnuiN6mq7wBGwI8sMsymmWQnAZCyZI9h4r9XnrN6i0kcZpQ1d7GlJVh5BmSkvzKxaKE1Rdly_sxeKqbFMIo9YvPYSEWQgX7A52MWqsF_PtOl51rkhO1ABIm0rbZdYnItsTfuYMlQekkNwQgHupp17pUoQBenm-nFPmaHWcmkwzmpTvjmRmTbaWjg1rA">
+                  <a href="index.html"> <img alt="Rose Express Cargo Logo" class="h-16 w-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyu7r0gdk1C0dvJem1wts8mQP-3sPW_g_W_Sok2a0Wqhij6LqnOqmkLX0HDBOmQwj5VEJEjVt2mnuiN6mq7wBGwI8sMsymmWQnAZCyZI9h4r9XnrN6i0kcZpQ1d7GlJVh5BmSkvzKxaKE1Rdly_sxeKqbFMIo9YvPYSEWQgX7A52MWqsF_PtOl51rkhO1ABIm0rbZdYnItsTfuYMlQekkNwQgHupp17pUoQBenm-nFPmaHWcmkwzmpTvjmRmTbaWjg1rA"></a> 
                 </div>
                 <div class="hidden md:flex items-center gap-8">
-                    <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
-                        href="index.html">Home</a>
+                    <a class="nav-link border-b-2 pb-1 transition-colors duration-200 cursor-pointer active:scale-95 text-secondary font-bold border-secondary"
+                        href="#">Home</a>
                     <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
                         href="index.html#services">Services</a>
                     <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
                         href="index.html#contact">Contact</a>
-                    <a class="nav-link border-b-2 pb-1 transition-colors duration-200 cursor-pointer active:scale-95 text-secondary font-bold border-secondary"
-                        href="#">About</a>
+                    <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
+                        href="about.html">About</a>
                 </div>
                 <div class="hidden md:flex items-center">
                     <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
                         class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2 rounded-lg font-bold transition-colors duration-200 shadow-[0_4px_14px_0_rgba(252,130,12,0.39)] inline-block">Get
                         a Quote</a>
                 </div>
+
                 <button id="mobile-menu-button" class="md:hidden text-primary p-2" type="button">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
@@ -150,7 +151,7 @@
                     class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-outline-variant shadow-lg">
                     <div class="flex flex-col px-6 py-4 gap-4">
 
-                        <a href="index.html" class="mobile-nav-link text-primary font-bold py-2">
+                        <a href="#" class="mobile-nav-link text-primary font-bold py-2">
                             Home
                         </a>
 
@@ -162,7 +163,7 @@
                             Contact
                         </a>
 
-                        <a href="#" class="mobile-nav-link text-on-surface-variant py-2">
+                        <a href="about.html" class="mobile-nav-link text-on-surface-variant py-2">
                             About
                         </a>
 
@@ -198,6 +199,57 @@
                         reliable, swift, and secure domestic and international courier services.
                     </p>
                 </div>
+            </div>
+        </section>
+        <!-- About / Vision / Mission Section -->
+        <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+            <div class="max-w-4xl mx-auto space-y-14 md:space-y-16">
+
+                <!-- About Us -->
+                <div class="flex flex-col items-start">
+                    <div class="text-secondary mb-2">
+                        <span class="material-symbols-outlined text-5xl md:text-6xl">groups</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-1">
+                        About Us
+                    </h2>
+                    <p class="font-body-md text-body-md text-on-surface leading-relaxed max-w-3xl">
+                        Rose Express Cargo &amp; Courier Pvt. Ltd. is committed to providing reliable, secure, and
+                        cost-effective logistics solutions for individuals, businesses, and e-commerce companies.
+                        Our experienced team ensures every shipment reaches its destination safely and on time.
+                    </p>
+                </div>
+
+                <!-- Our Vision -->
+                <div class="flex flex-col items-start">
+                    <div class="text-secondary mb-2">
+                        <span class="material-symbols-outlined text-5xl md:text-6xl">visibility</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-1">
+                        Our Vision
+                    </h2>
+                    <p class="font-body-md text-body-md text-on-surface leading-relaxed max-w-3xl">
+                        To become Nepal's most trusted courier and logistics company through innovation, reliability,
+                        and customer satisfaction.
+                    </p>
+                </div>
+
+                <!-- Our Mission -->
+                <div class="flex flex-col items-start">
+                    <div class="text-secondary mb-2">
+                        <span class="material-symbols-outlined text-5xl md:text-6xl">track_changes</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">
+                        Our Mission
+                    </h2>
+                    <ul class="font-body-md text-body-md text-on-surface leading-relaxed list-none space-y-0">
+                        <li>• Fast and secure delivery</li>
+                        <li>• Affordable logistics solutions</li>
+                        <li>• Professional customer service</li>
+                        <li>• Nationwide and worldwide connectivity</li>
+                    </ul>
+                </div>
+
             </div>
         </section>
         <!-- Mission / Info Bento Grid -->
@@ -265,30 +317,7 @@
                 </div>
             </div>
         </section>
-        <!-- Global Partners Section -->
-        <section class="bg-surface-container-low py-16 md:py-24 border-y border-outline-variant">
-            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
-                <span class="font-label-sm text-label-sm uppercase text-secondary tracking-widest mb-2 block">Our
-                    Network</span>
-                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-12">Trusted
-                    Global Partners</h2>
-                <div
-                    class="flex flex-wrap justify-center items-center gap-12 md:gap-16 opacity-100 hover:opacity-100 transition-opacity">
-                    <img alt="DHL" class="h-20 w-auto object-contain transition-all duration-300"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQz1V-No-BGocpcUZhPMoGL4fDtx7gR0CW57vrIguh4nuHiu8O9mwX468A7PJCFhzBDbTwtd8mq6qlmfLPBLNMzVrTaksPGgNFmNNTM8c9Ws9Tb9NoLmHo5X-AMPRmyHaald9U7Vx_OZaT8f72L7UCipX-YBBLRI-LQGFmSjHx6lLYmx7UH8O2w6IxatQpEdusAGNhtIPvIi5DQxLi-j4kGUFroXIEfvHixSOVbp6uIzaOMNiYrlzfrVugLOmhSkpNa-Y"><img
-                        alt="FedEx" class="h-20 w-auto object-contain transition-all duration-300"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0lMrE5x5nDlmsPhpdS2RKVZTyLxqAAa5hqUHeXgY6tBJ2CKrW5ICsY40FNkeOj6YqxdvQs6ZXCCZTzip5UwIsAIpuHh06eWlAFzEPSfwu8oRLFVmOStMsPDObUp_oglSDq7BMUP9e19GaeC1_QnIkIzY8WVs6BEROsQN6KU56APUiI-LrbpEluAG35TRogJlTc3oawbtVqirCYDA13Itf4KqurnD4rTUMFwPVTO69EakuEwnVNt7qE1rp4tVENZFiSa0"><img
-                        alt="UPS" class="h-20 w-auto object-contain transition-all duration-300"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG_5YTRvi97IX_pN6iVzaBsnoOyF_KceWywd2dsBYpPOP2b9Qzlhos7CODFLXIbDW1g3hDJ19QsmCdJqff2AFyPF-3gjm-Fg6HM0Pt4ZqHZIM8Va-lQ71z_vE7XlxTa41nimghvVuBn9pFdlT_VaB6xsHKP7kizL99tbf53IY069aD3VvC91IdNAq7bV6AtgiPpEn7ZKdAgNI3fAz8oJhGjzoAhEeUSfxCw_stAPEKt0z-SnN69bkY5ygfVFypL7d1UDo"><img
-                        alt="TNT" class="h-20 w-auto object-contain transition-all duration-300"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkBIuLa5iYICNuNemmJz9dpf2K8GMv71q6BccCreoQIDfF_BbEsaz0l2QtQqdK7F8uVtTgjf-t5zOaEgJbwXasQUD1fIzTkCAW_cAtf_bzsGSYrY2qLforsHyuOiOl8fHtoC0yK99uOkB_Khsk8YWx--5zts6q3HpK4sn5HmOrHKQwAezA_esv_ofSqwM75xtZlXaqVT2XlzWs0vrAZo_A3m6QqquVQFfgV6qnPwAAobNNA7FgOUMsOoCqFBFoHceoaGg"><img
-                        alt="Aramex" class="h-20 w-auto object-contain transition-all duration-300"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9RbD96X_U1EHxzCtM9XEZttiXkrC_WXAh4vQDSnTV8Nh0_6xLn_FxmKKHjONYroJtDTIsMG6U8Ifu-KNWwVP9eiB7OIIF2Ktnn7BFICxE0uVS7pwEjfVExefgCc8bIsCRoCo-S1w0FT3WumLLae6w9k7hEkod4HtJRIbwYxhIbd_1shSdUxAeuPZnZ1Z7BSKn0iE1bqElXOnWNgIgHz-yRzzxpbnjQbgfsh27UUNtyxucVP3I14W4FU1DLmaOJAzvUJg"><img
-                        alt="DPD" class="h-20 w-auto object-contain transition-all duration-300"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDegrYpR08-RGkKphzmbTmpQy3XywwEWugJdT_y6Ydp-otw9XYh42P9RBvvjrwLngKevfW7yxtNNJAFhj53o0vwrTqZediPeN3M9x5QmJBojIAIzJyg9MxsiA7vuESQAao8z5gwQZv5XTx3MZOfWCoYCo_7VIChnm5W64cJD9bMNax80ixf8gcoIxEGctLdp3DWdBZNysxIoCWaczr-sViQn5lNMdix6uQ5cAK5ehbiQUnfYuW8CXJdL7Rp9ao5jWpUsr4">
-                </div>
-            </div>
-        </section>
+
         <!-- Location & Contact Map Section -->
         <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -393,7 +422,7 @@
                 <div
                     class="rounded-xl overflow-hidden shadow-sm border border-outline-variant h-[400px] bg-surface-container-high">
                     <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14126.966952796464!2d85.3524!3d27.724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1970d2e564f1%3A0x6b09dfbd7a818c3!2sBoudha%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                        src="https://www.google.com/maps?q=Rose%20Express%20Cargo%20%26%20Courier%20Pvt.%20Ltd.&ll=27.7174984,85.3586007&z=17&output=embed"
                         style="border:0;" width="100%"></iframe>
                 </div>
             </div>
@@ -473,6 +502,18 @@
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
                                 </path>
                             </svg> Instagram</a></li>
+                    <li class="">
+                        <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors cursor-pointer flex items-center gap-2"
+                            href="https://www.tiktok.com/@rose.xpress" target="_blank" rel="noopener noreferrer">
+
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19.321 5.562a5.124 5.124 0 0 1-3.16-1.09A5.13 5.13 0 0 1 14.83 1H11.2v15.087a2.91 2.91 0 1 1-2.91-2.91c.31 0 .61.05.89.14v-3.7a6.63 6.63 0 1 0 5.75 6.56V8.54a8.72 8.72 0 0 0 4.39 1.18V6.09a5.14 5.14 0 0 1-2.999-.528z" />
+                            </svg>
+
+                            TikTok
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

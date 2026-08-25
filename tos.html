@@ -138,62 +138,65 @@
 
 <body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
     <!-- TopNavBar (Suppressed for focused content page per guidelines, but prompt asks to maintain it. Guidelines say suppress for linear/transactional or focused content. Resolving conflict: follow prompt's direct instruction to keep it, but simplify for content focus.) -->
-    <header
-        class="bg-surface/70 dark:bg-surface-container/70 fixed top-0 w-full z-50 backdrop-blur-xl border-b border-outline-variant dark:border-outline shadow-sm">
-        <div
-            class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-            <a class="flex items-center" href="#">
-                <img alt="Rose Express Cargo" class="h-16 w-auto object-contain"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyu7r0gdk1C0dvJem1wts8mQP-3sPW_g_W_Sok2a0Wqhij6LqnOqmkLX0HDBOmQwj5VEJEjVt2mnuiN6mq7wBGwI8sMsymmWQnAZCyZI9h4r9XnrN6i0kcZpQ1d7GlJVh5BmSkvzKxaKE1Rdly_sxeKqbFMIo9YvPYSEWQgX7A52MWqsF_PtOl51rkhO1ABIm0rbZdYnItsTfuYMlQekkNwQgHupp17pUoQBenm-nFPmaHWcmkwzmpTvjmRmTbaWjg1rA">
-                <span class="sr-only">Rose Express Cargo</span>
-            </a>
-            <nav class="hidden md:flex gap-gutter items-center">
-                <a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors duration-200"
-                    href="index.html">Home</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors duration-200"
-                    href="index.html#services">Services</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors duration-200"
-                    href="about.html">About</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors duration-200"
-                    href="index.html#contact">Contact</a>
-            </nav>
-            <div class="hidden md:flex items-center gap-4">
-                <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
-                    class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2 rounded-lg font-bold transition-colors duration-200 shadow-[0_4px_14px_0_rgba(252,130,12,0.39)] inline-block">Get
-                    a Quote</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden text-primary p-2" type="button">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-
-            <div id="mobile-menu"
-                class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-outline-variant shadow-lg">
-                <div class="flex flex-col px-6 py-4 gap-4">
-
-                    <a href="#" class="mobile-nav-link text-primary font-bold py-2">
-                        Home
-                    </a>
-
-                    <a href="index.html#services" class="mobile-nav-link text-on-surface-variant py-2">
-                        Services
-                    </a>
-
-                    <a href="index.html#contact" class="mobile-nav-link text-on-surface-variant py-2">
-                        Contact
-                    </a>
-
-                    <a href="about.html" class="mobile-nav-link text-on-surface-variant py-2">
-                        About
-                    </a>
-
+    <header>
+        <nav
+            class="fixed top-0 left-0 bg-surface-container-lowest dark:bg-inverse-surface w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm">
+            <div
+                class="flex justify-between items-center h-20 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <div
+                    class="font-display-lg text-headline-md font-bold text-primary dark:text-inverse-primary flex items-center gap-2">
+                  <a href="index.html"> <img alt="Rose Express Cargo Logo" class="h-16 w-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyu7r0gdk1C0dvJem1wts8mQP-3sPW_g_W_Sok2a0Wqhij6LqnOqmkLX0HDBOmQwj5VEJEjVt2mnuiN6mq7wBGwI8sMsymmWQnAZCyZI9h4r9XnrN6i0kcZpQ1d7GlJVh5BmSkvzKxaKE1Rdly_sxeKqbFMIo9YvPYSEWQgX7A52MWqsF_PtOl51rkhO1ABIm0rbZdYnItsTfuYMlQekkNwQgHupp17pUoQBenm-nFPmaHWcmkwzmpTvjmRmTbaWjg1rA"></a> 
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="nav-link border-b-2 pb-1 transition-colors duration-200 cursor-pointer active:scale-95 text-secondary font-bold border-secondary"
+                        href="#">Home</a>
+                    <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
+                        href="index.html#services">Services</a>
+                    <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
+                        href="index.html#contact">Contact</a>
+                    <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
+                        href="about.html">About</a>
+                </div>
+                <div class="hidden md:flex items-center">
                     <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
-                        class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-bold text-center">
-                        Get a Quote
-                    </a>
+                        class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2 rounded-lg font-bold transition-colors duration-200 shadow-[0_4px_14px_0_rgba(252,130,12,0.39)] inline-block">Get
+                        a Quote</a>
+                </div>
 
+                <button id="mobile-menu-button" class="md:hidden text-primary p-2" type="button">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+
+                <div id="mobile-menu"
+                    class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-outline-variant shadow-lg">
+                    <div class="flex flex-col px-6 py-4 gap-4">
+
+                        <a href="#" class="mobile-nav-link text-primary font-bold py-2">
+                            Home
+                        </a>
+
+                        <a href="index.html#services" class="mobile-nav-link text-on-surface-variant py-2">
+                            Services
+                        </a>
+
+                        <a href="index.html#contact" class="mobile-nav-link text-on-surface-variant py-2">
+                            Contact
+                        </a>
+
+                        <a href="about.html" class="mobile-nav-link text-on-surface-variant py-2">
+                            About
+                        </a>
+
+                        <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
+                            class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-bold text-center">
+                            Get a Quote
+                        </a>
+
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
     <main class="flex-grow pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto w-full">
         <div
@@ -273,32 +276,250 @@
         </div>
     </main>
     <!-- Footer -->
-    <footer
-        class="bg-primary dark:bg-surface-container-highest w-full flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-8 gap-gutter"
-        id="contact">
-        <div class="flex flex-col gap-2">
-            <div class="text-on-primary font-bold font-headline-md flex items-center gap-2"><img
-                    alt="Rose Express Cargo Logo" class="h-10 w-auto object-contain"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkcEgETc-B4kWo12AfkRYaso_4qvtfV8b4K3mbDo0tDGVfpyXvBLYRhLSvbFFe7nu507VcLh3lz__9mYzETDyWOuAGUCge37AZTWuTpypgBlMAPFN-gsGj0rkoV7ibs-ee4COwf_0SIp80dcGFZi7zlkWEfB3VmxK9WZdCcO20TF0xMTbxslmCLvLFobXeqJP7M5PGjome5W8Bd30_wtlQ2R6VrWZvk03yAccQpw8zwkAEtYpfNkRiWmkBBOYD9kVQoms">
+    <footer class="bg-primary text-on-primary w-full mt-auto">
+
+        <div class="px-margin-mobile md:px-margin-desktop py-12 max-w-max-width mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+                <!-- ========================================= -->
+                <!-- COLUMN 1: LOGO, CONTACT & SOCIAL MEDIA -->
+                <!-- ========================================= -->
+
+                <div class="relative">
+
+                    <!-- Logo -->
+                    <span class="font-headline-md text-headline-md font-bold text-on-primary mb-4 block">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkcEgETc-B4kWo12AfkRYaso_4qvtfV8b4K3mbDo0tDGVfpyXvBLYRhLSvbFFe7nu507VcLh3lz__9mYzETDyWOuAGUCge37AZTWuTpypgBlMAPFN-gsGj0rkoV7ibs-ee4COwf_0SIp80dcGFZi7zlkWEfB3VmxK9WZdCcO20TF0xMTbxslmCLvLFobXeqJP7M5PGjome5W8Bd30_wtlQ2R6VrWZvk03yAccQpw8zwkAEtYpfNkRiWmkBBOYD9kVQoms"
+                            alt="Rose Express Cargo" class="w-auto h-24 object-contain">
+                    </span>
+
+
+                    <!-- Description -->
+                    <p class="font-body-md text-body-md text-on-primary/80 mb-4">
+                        Connecting Kathmandu to the world with reliable logistics.
+                    </p>
+
+
+                    <!-- Contact Information -->
+                    <p class="font-body-md text-body-md text-on-primary/80 text-sm">
+                        Boudha-6, Kathmandu<br>
+                        WhatsApp: +977 9867288040<br>
+                        rosexpressboudha@gmail.com<br>
+                        &#9742; 01-5929573
+                    </p>
+
+
+                    <!-- ========================================= -->
+                    <!-- GOOGLE MAP -->
+                    <!-- ========================================= -->
+
+                    <div class="md:absolute md:left-[155%] md:top-[170px] w-full md:w-[510px] mt-8 md:mt-0">
+
+                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim mb-4">
+                            Find Us
+                        </h4>
+
+                        <div class="rounded-lg overflow-hidden border border-on-primary/20 shadow-sm h-[260px]">
+                            <iframe
+                                src="https://www.google.com/maps?q=Rose%20Express%20Cargo%20%26%20Courier%20Pvt.%20Ltd.&ll=27.7174984,85.3586007&z=17&output=embed"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+
+                    <!-- ========================================= -->
+                    <!-- FOLLOW US -->
+                    <!-- ========================================= -->
+
+                    <div class="mt-8">
+
+                        <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim mb-4">
+                            Follow Us
+                        </h4>
+
+                        <ul class="space-y-3">
+
+                            <!-- Facebook -->
+                            <li>
+                                <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors flex items-center gap-2"
+                                    href="https://www.facebook.com/profile.php?id=61593496862490" target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                                        </path>
+
+                                    </svg>
+
+                                    Facebook
+
+                                </a>
+                            </li>
+
+
+                            <!-- Instagram -->
+                            <li>
+                                <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors flex items-center gap-2"
+                                    href="https://www.instagram.com/rosexpressboudha/" target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.79 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                        </path>
+
+                                    </svg>
+
+                                    Instagram
+
+                                </a>
+                            </li>
+
+
+                            <!-- TikTok -->
+                            <li>
+                                <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors flex items-center gap-2"
+                                    href="https://www.tiktok.com/@rose.xpress" target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+
+                                        <path
+                                            d="M19.321 5.562a5.124 5.124 0 0 1-3.16-1.09A5.13 5.13 0 0 1 14.83 1H11.2v15.087a2.91 2.91 0 1 1-2.91-2.91c.31 0 .61.05.89.14v-3.7a6.63 6.63 0 1 0 5.75 6.56V8.54a8.72 8.72 0 0 0 4.39 1.18V6.09a5.14 5.14 0 0 1-2.999-.528z">
+                                        </path>
+
+                                    </svg>
+
+                                    TikTok
+
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ========================================= -->
+                <!-- COLUMN 2: COMPANY -->
+                <!-- ========================================= -->
+
+                <div>
+
+                    <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim mb-4">
+                        Company
+                    </h4>
+
+                    <ul class="space-y-2">
+
+                        <li>
+                            <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                                href="about.html">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                                href="index.html#services">
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                                href="index.html#contact">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ========================================= -->
+                <!-- COLUMN 3: LEGAL -->
+                <!-- ========================================= -->
+
+                <div>
+
+                    <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim mb-4">
+                        Legal
+                    </h4>
+
+                    <ul class="space-y-2">
+
+                        <li>
+                            <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                                href="privacy.html">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                                href="tos.html">
+                                Terms of Service
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ========================================= -->
+                <!-- COLUMN 4: SUPPORT -->
+                <!-- ========================================= -->
+
+                <div>
+
+                    <h4 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed-dim mb-4">
+                        Support
+                    </h4>
+
+                    <ul class="space-y-2">
+
+                        <li>
+                            <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                                href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </div>
-            <p class="text-on-primary-container font-label-sm text-label-sm" style="color: white;">Boudha-6, Kathmandu (In front of Boudha
-                Boutique Inn)</p>
-            <div class="flex gap-4 mt-2">
-                <span class="text-on-primary flex items-center gap-1 font-label-sm"><span
-                        class="material-symbols-outlined text-sm">phone</span> 01-5929573</span>
-                <span class="text-on-primary flex items-center gap-1 font-label-sm"><span
-                        class="material-symbols-outlined text-sm">smartphone</span> 9867288040</span>
-            </div>
-        </div>
-        <div class="flex gap-6 text-on-primary-container opacity-80 font-label-sm text-label-sm">
-            <a class="hover:text-secondary-fixed transition-opacity" href="privacy.html">Privacy Policy</a>
-            <a class="hover:text-secondary-fixed transition-opacity" href="tos.html">Terms of Service</a>
-            <a class="hover:text-secondary-fixed transition-opacity" href="faq.html">FAQ</a>
 
         </div>
-        <div class="text-on-primary-container opacity-80 font-label-sm text-label-sm" style="color: white;">
-            © 2026 Rose Express Cargo And Courier Pvt. Ltd. All rights reserved.
+
+
+        <!-- ========================================= -->
+        <!-- COPYRIGHT -->
+        <!-- ========================================= -->
+
+        <div class="border-t border-on-primary/20 px-margin-mobile md:px-margin-desktop py-6 max-w-max-width mx-auto">
+
+            <p class="font-body-md text-body-md text-on-primary/60 text-sm text-center">
+
+                © 2026 Rose Express Cargo &amp; Courier Pvt. Ltd.
+                All rights reserved.
+
+            </p>
+
         </div>
+
     </footer>
         <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');

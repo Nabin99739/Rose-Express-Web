@@ -644,7 +644,6 @@
                 targetLink.classList.add(...activeClasses);
             }
 
-            // Initialize active state based on hash or default to first link
             const hash = window.location.hash || '#';
             const initialLink = Array.from(navLinks).find(link => link.getAttribute('href') === hash);
             if (initialLink) {

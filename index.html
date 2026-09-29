@@ -137,6 +137,8 @@
                     <a class="nav-link border-b-2 pb-1 transition-colors duration-200 cursor-pointer active:scale-95 text-secondary font-bold border-secondary"
                         href="#">Home</a>
                     <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
+                        href="track.html">Track</a>
+                    <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
                         href="index.html#services">Services</a>
                     <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
                         href="index.html#contact">Contact</a>
@@ -144,6 +146,8 @@
                         href="about.html">About</a>
                     <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
                         href="link.html">Links</a>
+                    <!-- <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
+                        href="collectionpoints.html">Our Collection Points</a> -->
                 </div>
                 <div class="hidden md:flex items-center">
                     <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
@@ -163,6 +167,10 @@
                             Home
                         </a>
 
+                        <a href="track.html" class="mobile-nav-link text-on-surface-variant py-2">
+                            Track
+                        </a>
+
                         <a href="index.html#services" class="mobile-nav-link text-on-surface-variant py-2">
                             Services
                         </a>
@@ -178,6 +186,10 @@
                         <a href="link.html" class="mobile-nav-link text-on-surface-variant py-2">
                             Links
                         </a>
+
+                        <!-- <a href="collectionpoints.html" class="mobile-nav-link text-on-surface-variant py-2">
+                            Our Collection Points
+                        </a> -->
 
                         <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
                             class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-bold text-center">
@@ -208,6 +220,16 @@
                         class="font-headline-md text-headline-md md:text-headline-lg text-surface-container-low mb-10 border-l-4 border-secondary-container pl-4">
                         Domestic &amp; International Courier Services</p>
                     <!-- Quick Track -->
+                    <form action="track.html" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl">
+                        <label for="quick-track" class="sr-only">Tracking number</label>
+                        <input id="quick-track" name="number" required autocomplete="off"
+                            placeholder="Enter the tracking number"
+                            class="flex-1 min-w-0 px-4 py-3 rounded-lg border-0 text-on-surface bg-surface-container-lowest placeholder:text-outline focus:ring-2 focus:ring-secondary-container">
+                        <button type="submit"
+                            class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-8 py-3 rounded-lg font-bold transition-colors duration-200">
+                            Track Shipment
+                        </button>
+                    </form>
                 </div>
             </div>
         </header>

@@ -149,6 +149,10 @@
                     <!-- <a class="nav-link text-on-surface-variant dark:text-surface-variant hover:text-secondary border-b-2 border-transparent pb-1 transition-colors duration-200 cursor-pointer active:scale-95"
                         href="collectionpoints.html">Our Collection Points</a> -->
                 </div>
+                <div class="hidden lg:flex items-center gap-2 text-on-surface-variant text-sm whitespace-nowrap">
+                    <span class="material-symbols-outlined text-base">visibility</span>
+                    <span><span class="visit-count">–</span> Visitors</span>
+                </div>
                 <div class="hidden md:flex items-center">
                     <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
                         class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-6 py-2 rounded-lg font-bold transition-colors duration-200 shadow-[0_4px_14px_0_rgba(252,130,12,0.39)] inline-block">Get
@@ -191,6 +195,11 @@
                             Our Collection Points
                         </a> -->
 
+                        <div class="flex items-center gap-2 text-on-surface-variant text-sm py-2">
+                            <span class="material-symbols-outlined text-base">visibility</span>
+                            <span><span class="visit-count">–</span> visitors</span>
+                        </div>
+
                         <a href="https://wa.me/9779867288040" target="_blank" rel="noopener noreferrer"
                             class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg font-bold text-center">
                             Get a Quote
@@ -198,6 +207,7 @@
 
                     </div>
                 </div>
+
             </div>
         </nav>
     </header>
@@ -222,7 +232,7 @@
                     <!-- Quick Track -->
                     <form action="track.html" method="get" class="flex flex-col sm:flex-row gap-3 max-w-xl">
                         <label for="quick-track" class="sr-only">Tracking number</label>
-                        <input id="quick-track" name="number" required autocomplete="off"
+                        <input id="quick-track" name="number" required autocomplete="on"
                             placeholder="Enter the tracking number"
                             class="flex-1 min-w-0 px-4 py-3 rounded-lg border-0 text-on-surface bg-surface-container-lowest placeholder:text-outline focus:ring-2 focus:ring-secondary-container">
                         <button type="submit"
@@ -375,7 +385,7 @@
                         alt="FedEx Logo" class="h-20 w-24 object-contain transition-all duration-300"><img
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6jBulxJ8d1myAfYV0_qydLWSx8MJL-J54ulRine9_SY2kon6sGSPg_7cD1kHbdMsUn36BqI_Hh9JK-y_4pV2du4MHWXS773o8r6t3BpwXnIr2RmiQTPMp-697tNnNCkWhHbcpGyLE4aVTe0yjZscn-biM-BNvClcQ1nr6cuTHIG2gJeoCDWcvmVbRxKrRRaGL6ELg40R_EaM8MG8SPlDB4bcIWRXLYvtFBVP3-LAujIPo8T84Hrg9G9uvD7yN6HGc4M4"
                         alt="UPS Logo" class="h-20 w-24 object-contain transition-all duration-300"><img
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3bgWtHctyfkDrrC7hQGtrDpf3hFjXhOSmPWbpUAndaPrqQFiyIHUhdgObec7ivZwHakvvC0tPCdfh_Fray4ub4xhQzNxsmApGrh52UVErZyNYMR-1x4NWdN_eTKteOeNDkTq6WgfU4ktLRoVB0u_0j5N-4Rmms5wTcelVUt_iXvcjFe9wRxInUABQmOljV6V_pgHH9P5ULoi22oSJF8HpRdvr-U7YAaWIvuysQ4FQfye8jf7StWGSCYLgYqOaIZnNxUc"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmsKgKKQzflBYpg06kLFvJkNVfNg66rw7nfFKH04-9RY0dPCTdUR4-0ZxTr8_HThAQlIQjFkZ5qwaITd1Y4qbfCS118ZSv3nTPbQ6ZBC-sSPBnJwXFH30zEMh_MRmPXHgs--dHkUkLZjtIggN04dVSflXcdEKqiJjV-9rYdvsDrE1HgRHETaMb5ZVrDO720ZOIhHHAEtReBisyqlrSrXq3ITMqAjdO4raHHfPkRCky2kR4lJZvdY-KfloIaolOEeClDQ"
                         alt="TNT Logo" class="h-20 w-24 object-contain transition-all duration-300"><img
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe11-rlnq6XZ4gcwWZ2g6XeO8BpZLPwFKiXU2c0Xvx_bxhpSYaX_FR9Yy_6JRAOV0e4SZp2jwQo_BnPvEuhe0vHLoV4WL5sgd5XZLvbbALuYQeWW_oeZNhj8O10UfMZO7eJa8RaeRzvWKvX-ZFoT7i-ksYfr0yuKk919sVeYU4eIO0ZpQ-ts6RWFRuLL7tBhk3hQPIS47FfuyhZ9wgFNzQEy2rbg1PmOigpo5GyhFes38IBeeeNSiM_YKhzOzeDMnbARg"
                         alt="Aramex Logo" class="h-20 w-24 object-contain transition-all duration-300"><img
@@ -702,6 +712,42 @@
                 const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
                 icon.textContent = 'menu';
             });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const base = 'https://api.counterapi.dev/v2/rose-express-visitors/rose-express-visitors';
+            const els = document.querySelectorAll('.visit-count');
+            if (!els.length) return;
+
+            const hide = () => els.forEach(el => { el.parentElement.parentElement.style.display = 'none'; });
+            const show = n => els.forEach(el => { el.textContent = n.toLocaleString(); });
+            const opts = { cache: 'no-store' };
+
+            let counted = false;
+            try { counted = sessionStorage.getItem('visitCounted') === '1'; } catch (e) { }
+
+            // Highest number ever displayed in this browser, so it never goes down.
+            let floor = 0;
+            try { floor = parseInt(localStorage.getItem('visitFloor'), 10) || 0; } catch (e) { }
+
+            // Send the increment first, with keepalive so refreshes can't cancel it.
+            if (!counted) {
+                try { sessionStorage.setItem('visitCounted', '1'); } catch (e) { }
+                fetch(base + '/up', { cache: 'no-store', keepalive: true }).catch(() => { });
+            }
+
+            fetch(base, opts)
+                .then(r => r.json())
+                .then(d => {
+                    let n = d && d.data && d.data.up_count;
+                    if (typeof n !== 'number') { hide(); return; }
+                    if (!counted) n += 1;      // include this visit
+                    n = Math.max(n, floor);    // never show less than before
+                    show(n);
+                    try { localStorage.setItem('visitFloor', String(n)); } catch (e) { }
+                })
+                .catch(err => { console.error('counter error', err); hide(); });
         });
     </script>
 

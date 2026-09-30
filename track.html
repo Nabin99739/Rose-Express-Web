@@ -563,15 +563,20 @@
                 url: n => 'https://t.17track.net/en#nums=' + n
             },
             {
-                id: 'post', name: 'EMS / Nepal Post', note: 'Postal numbers like EE123456789NP',
-                url: n => 'https://t.17track.net/en#nums=' + n
-            }
+                id: 'post', name: 'EMS / Postal (EMS Official)',
+                note: 'Postal numbers like EE123456789NP. Opens results directly',
+                url: n => 'https://www.ems.post/en/global-network/tracking?itemId=' + n
+            },
+            {
+                id: 'gaaubesi', name: 'Gaaubesi Logistics', note: 'Nepal domestic courier. Opens results directly',
+                url: n => 'https://delivery.gaaubesi.com/orders/track-order/?track_id=' + n.toUpperCase()
+            },
         ];
 
         // Best-guess carrier from the number format, shown first as "Most likely".
         function guess(n) {
             const u = n.toUpperCase().replace(/\s+/g, '');
-
+            if (/^(?=.*[A-F])[0-9A-F]{12}4[0-9A-F]{2}$/.test(u)) return 'gaaubesi';
             if (/^1Z[0-9A-Z]{16}$/.test(u)) return 'ups';
             if (/^[A-Z]{2}\d{9}[A-Z]{2}$/.test(u)) return 'post';
 
@@ -587,35 +592,40 @@
             return 'all';
         }
 
-        function show(n) {
-            const g = guess(n), num = encodeURIComponent(n);
-            // Show only the most likely carrier plus 17TRACK (auto-detects any carrier).
-            const ordered = g === 'all'
+function show(n) {
+    const g = guess(n), num = encodeURIComponent(n);
+
+    const ordered = g === 'gaaubesi'
+        ? [carriers.find(c => c.id === 'gaaubesi')]
+        : g === 'post'
+            ? [carriers.find(c => c.id === 'post'), carriers.find(c => c.id === 'all')]
+            : g === 'all'
                 ? [carriers.find(c => c.id === 'all')]
                 : [carriers.find(c => c.id === g), carriers.find(c => c.id === 'all')]
                     .filter((c, i, arr) => arr.findIndex(x => x.url(num) === c.url(num)) === i);
-            out.innerHTML =
-                '<div class="max-w-2xl">' +
-                '<p class="text-on-surface mb-1">Tracking number</p>' +
-                '<p class="font-headline-md text-headline-md text-primary mb-6 break-all">' + esc(n) + '</p>' +
-                '<div class="grid gap-3">' +
-                ordered.map((c, i) =>
-                    '<a target="_blank" rel="noopener" href="' + c.url(num) + '" class="flex items-center justify-between rounded-lg border p-4 transition-colors duration-200 ' +
-                    (i === 0 ? 'border-secondary-container bg-secondary-fixed hover:bg-secondary-container' : 'border-outline-variant bg-surface-container-lowest hover:bg-surface-container') + '">' +
-                    '<span><span class="font-bold text-on-surface">Track on ' + esc(c.name) + '</span>' +
-                    (i === 0 && g !== 'all' ? '<span class="ml-2 text-sm text-secondary font-semibold">Most likely</span>' : '') +
-                    (c.note ? '<span class="block text-sm text-on-surface-variant">' + esc(c.note) + '</span>' : '') + '</span>' +
-                    '<span class="material-symbols-outlined text-primary">open_in_new</span></a>'
-                ).join('') + '</div>' +
-                '<p class="text-sm text-on-surface-variant mt-5">Results open in a new tab on the carrier\'s official site. If the first says the number is not found, try 17TRACK, which checks all carriers.</p></div>' +
-                '<div id="YQContainer" class="w-full mt-8"></div>';
-            try {
-                if (typeof YQV5 !== 'undefined') {
-                    document.getElementById('YQContainer').style.minHeight = '560px';
-                    YQV5.trackSingle({ YQ_ContainerId: 'YQContainer', YQ_Height: 560, YQ_Fc: '0', YQ_Lang: 'en', YQ_Num: n });
-                }
-            } catch (err) { console.error(err); }
+
+    out.innerHTML =
+        '<div class="max-w-2xl">' +
+        '<p class="text-on-surface mb-1">Tracking number</p>' +
+        '<p class="font-headline-md text-headline-md text-primary mb-6 break-all">' + esc(n) + '</p>' +
+        '<div class="grid gap-3">' +
+        ordered.map((c, i) =>
+            '<a target="_blank" rel="noopener" href="' + c.url(num) + '" class="flex items-center justify-between rounded-lg border p-4 transition-colors duration-200 ' +
+            (i === 0 ? 'border-secondary-container bg-secondary-fixed hover:bg-secondary-container' : 'border-outline-variant bg-surface-container-lowest hover:bg-surface-container') + '">' +
+            '<span><span class="font-bold text-on-surface">Track on ' + esc(c.name) + '</span>' +
+            (i === 0 && g !== 'all' ? '<span class="ml-2 text-sm text-secondary font-semibold">Most likely</span>' : '') +
+            (c.note ? '<span class="block text-sm text-on-surface-variant">' + esc(c.note) + '</span>' : '') + '</span>' +
+            '<span class="material-symbols-outlined text-primary">open_in_new</span></a>'
+        ).join('') + '</div>' +
+        '<p class="text-sm text-on-surface-variant mt-5">Results open in a new tab on the carrier\'s official site. If the first says the number is not found, try 17TRACK, which checks all carriers.</p></div>' +
+        '<div id="YQContainer" class="w-full mt-8"></div>';
+    try {
+        if (typeof YQV5 !== 'undefined') {
+            document.getElementById('YQContainer').style.minHeight = '560px';
+            YQV5.trackSingle({ YQ_ContainerId: 'YQContainer', YQ_Height: 560, YQ_Fc: '0', YQ_Lang: 'en', YQ_Num: n });
         }
+    } catch (err) { console.error(err); }
+}
 
         form.addEventListener('submit', e => {
             e.preventDefault();

@@ -546,7 +546,7 @@
             { id: 'aramex', name: 'Aramex', url: n => 'https://www.aramex.com/track/results?ShipmentNumber=' + n },
             { id: 'ups',    name: 'UPS',    url: n => 'https://www.ups.com/track?tracknum=' + n },
             { id: 'post',   name: 'EMS / Nepal Post', note: 'Postal numbers like EE123456789NP',
-              url: n => 'https://t.17track.net/en#nums=' + n },
+              url: n => 'https://www.ems.post/en/global-network/tracking?itemId=' + n },
             { id: 'dpd',    name: '17 Track', note: 'DPD\u2019s own site also asks for your postcode, so 17TRACK is usually faster here',
               url: n => 'https://t.17track.net/en#nums=' + n,
               // DPD's own tracking form can't be pre-filled with the number — it always
